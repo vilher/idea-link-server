@@ -13,5 +13,5 @@ app.get('/remove-char/:text/:char', (req, res) => {
 
 app.listen(
     process.env.SERVER_PORT,
-    () => console.log(`Server is listening on port ${process.env.SERVER_PORT}.`)
+    () => console.log(`Server is listening on port ${process.env.PORT || process.env.SERVER_PORT}.`)
 );
