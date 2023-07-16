@@ -3,8 +3,8 @@ require('dotenv').config()
 
 const app = express();
 
-app.get('/remove-char/:text/:char', (req, res) => {
-    const { text, char } = req.params
+app.get('/remove-char', (req, res) => {
+    const { text, char } = req.query
 
     let regex = new RegExp(char, 'gi')
     let result = text.replace(regex, '')
